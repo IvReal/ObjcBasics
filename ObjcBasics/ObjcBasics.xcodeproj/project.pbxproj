@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AA4A6EBE22CE325200A080FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A6EBD22CE325200A080FF /* main.m */; };
+		AA9A93E422D68A8100464808 /* Lesson1.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9A93E322D68A8100464808 /* Lesson1.m */; };
+		AA9A93E622D68AB400464808 /* Lesson2.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9A93E522D68AB400464808 /* Lesson2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		AA4A6EBA22CE325200A080FF /* ObjcBasics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjcBasics; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4A6EBD22CE325200A080FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA9A93E322D68A8100464808 /* Lesson1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson1.m; sourceTree = "<group>"; };
+		AA9A93E522D68AB400464808 /* Lesson2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson2.m; sourceTree = "<group>"; };
+		AA9A93E722D68AC900464808 /* Lesson1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson1.h; sourceTree = "<group>"; };
+		AA9A93E822D68AD700464808 /* Lesson2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson2.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				AA4A6EBD22CE325200A080FF /* main.m */,
+				AA9A93E322D68A8100464808 /* Lesson1.m */,
+				AA9A93E522D68AB400464808 /* Lesson2.m */,
+				AA9A93E722D68AC900464808 /* Lesson1.h */,
+				AA9A93E822D68AD700464808 /* Lesson2.h */,
 			);
 			path = ObjcBasics;
 			sourceTree = "<group>";
@@ -118,7 +128,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9A93E622D68AB400464808 /* Lesson2.m in Sources */,
 				AA4A6EBE22CE325200A080FF /* main.m in Sources */,
+				AA9A93E422D68A8100464808 /* Lesson1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
