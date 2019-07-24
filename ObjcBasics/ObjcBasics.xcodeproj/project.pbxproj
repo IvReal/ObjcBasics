@@ -10,6 +10,7 @@
 		AA4A6EBE22CE325200A080FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A6EBD22CE325200A080FF /* main.m */; };
 		AA9A93E422D68A8100464808 /* Lesson1.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9A93E322D68A8100464808 /* Lesson1.m */; };
 		AA9A93E622D68AB400464808 /* Lesson2.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9A93E522D68AB400464808 /* Lesson2.m */; };
+		AA9A93EB22E0976900464808 /* Lesson3.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9A93EA22E0976900464808 /* Lesson3.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		AA9A93E522D68AB400464808 /* Lesson2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson2.m; sourceTree = "<group>"; };
 		AA9A93E722D68AC900464808 /* Lesson1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson1.h; sourceTree = "<group>"; };
 		AA9A93E822D68AD700464808 /* Lesson2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson2.h; sourceTree = "<group>"; };
+		AA9A93E922E0973A00464808 /* Lesson3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson3.h; sourceTree = "<group>"; };
+		AA9A93EA22E0976900464808 /* Lesson3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson3.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				AA4A6EBD22CE325200A080FF /* main.m */,
-				AA9A93E322D68A8100464808 /* Lesson1.m */,
-				AA9A93E522D68AB400464808 /* Lesson2.m */,
 				AA9A93E722D68AC900464808 /* Lesson1.h */,
+				AA9A93E322D68A8100464808 /* Lesson1.m */,
 				AA9A93E822D68AD700464808 /* Lesson2.h */,
+				AA9A93E522D68AB400464808 /* Lesson2.m */,
+				AA9A93E922E0973A00464808 /* Lesson3.h */,
+				AA9A93EA22E0976900464808 /* Lesson3.m */,
 			);
 			path = ObjcBasics;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				AA9A93E622D68AB400464808 /* Lesson2.m in Sources */,
 				AA4A6EBE22CE325200A080FF /* main.m in Sources */,
 				AA9A93E422D68A8100464808 /* Lesson1.m in Sources */,
+				AA9A93EB22E0976900464808 /* Lesson3.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
