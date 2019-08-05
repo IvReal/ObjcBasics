@@ -7,6 +7,7 @@
 #import "Lesson3.h" // enum Action
 
 // 1. Изменить созданный калькулятор из предыдущих уроков на ручное управление памятью.
+
 NSNumber* calculate2(enum Action act, NSNumber* a, NSNumber* b)
 {
     switch (act) {
@@ -17,15 +18,15 @@ NSNumber* calculate2(enum Action act, NSNumber* a, NSNumber* b)
         case actMult:
             return @([a intValue] * [b intValue]);;
         case actDiv:
-            if (b.intValue == 0)
+            if ([b intValue] == 0)
             {
                 NSLog(@"Invalid operand");
-                return 0;
+                return nil;
             }
             return @([a floatValue] / [b floatValue]);;
         default:
             NSLog(@"Not supported action");
-            return 0;
+            return nil;
     }
 }
 
@@ -53,16 +54,17 @@ void Lesson5Task1(void)
     // Деление на 0
     [operand2 release];
     operand2 = [NSNumber numberWithInt:0];
-    NSLog(@"%@ / %@ = ", operand1, operand2);
     result = calculate2(actDiv, operand1, operand2);
+    NSLog(@"%@ / %@ = %@", operand1, operand2, result);
+    [operand1 release];
     [operand2 release];
     [result release];
 }
 
 // 2. Смоделировать и разработать программу для стаи птиц (на основе практического задания) с применением ручного управления памятью.
 
+// Класс птички
 @implementation Bird
-
 - (instancetype)initWithName:(NSString *)name {
     self = [super init];
     if (self) {
@@ -73,17 +75,15 @@ void Lesson5Task1(void)
     }
     return self;
 }
-
 - (void)dealloc {
     NSLog(@"Goodbye %@", _name);
     [_name release];
     [super dealloc];
 }
-
 @end
 
+// Класс стаи
 @implementation Flight
-
 - (instancetype)init
 {
     self = [super init];
@@ -92,7 +92,6 @@ void Lesson5Task1(void)
     }
     return self;
 }
-
 - (void)addBirds:(NSArray *)birds {
     [birds retain];
     [birds release];
@@ -101,7 +100,6 @@ void Lesson5Task1(void)
         NSLog(@"%@ join to flight", bird.name);
     }
 }
-
 - (void)breakUp {
     NSLog(@"All birds leave the flight");
     for (Bird *bird in _birds) {
@@ -109,13 +107,11 @@ void Lesson5Task1(void)
     }
     [_birds release];
 }
-
 - (void)dealloc {
     [self breakUp];
     NSLog(@"Dealloc flight");
     [super dealloc];
 }
-
 @end
 
 void Lesson5Task2(void)
@@ -133,19 +129,20 @@ void Lesson5Task2(void)
 }
 
 // 3. *Улучшить созданную программу из задания 2 с применением пула автоматического освобождения.
+
 void Lesson5Task3(void)
 {
     printf("ANGRY BIRDS (autoreleasepool)\n");
-    /* почему-то так не работает
-     @autoreleasepool {
+    @autoreleasepool {
         NSArray *birds = [[NSArray alloc] initWithObjects:
                           [[Bird alloc] initWithName:@"Jay"],
                           [[Bird alloc] initWithName:@"Jim"],
                           [[Bird alloc] initWithName:@"Jake"],
                           nil];
-        Flight *angryBirds = [[Flight alloc] init];
+        Flight *angryBirds = [[[Flight alloc] init] autorelease];
         [angryBirds addBirds:birds];
-    }*/
+    }
+    /* alternative way
     NSAutoreleasePool *pool = [NSAutoreleasePool new];
     NSArray *birds = [[NSArray alloc] initWithObjects:
                       [[Bird alloc] initWithName:@"Jay"],
@@ -154,6 +151,6 @@ void Lesson5Task3(void)
                       nil];
     Flight *angryBirds = [[[Flight alloc] init] autorelease];
     [angryBirds addBirds:birds];
-    [pool release];
+    [pool release];*/
  }
 
