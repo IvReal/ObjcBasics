@@ -8,8 +8,9 @@
 #include "Lesson1.h"
 #include "Lesson2.h"
 #include "Lesson3.h"
+#include "Lesson4.h"
 
-#define CURRENT_LESSON 3
+#define CURRENT_LESSON 4
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -27,6 +28,9 @@ int main(int argc, const char * argv[]) {
                 Lesson3Task1();
                 Lesson3Task2();
                 Lesson3Task3();
+                break;
+            case 4:
+                Lesson4Task();
                 break;
             default:
                 break;

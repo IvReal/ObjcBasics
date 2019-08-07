@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA4A6EBE22CE325200A080FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A6EBD22CE325200A080FF /* main.m */; };
+		AA85B73922E9E11000804670 /* Lesson4.m in Sources */ = {isa = PBXBuildFile; fileRef = AA85B73822E9E11000804670 /* Lesson4.m */; };
 		AA9A93E422D68A8100464808 /* Lesson1.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9A93E322D68A8100464808 /* Lesson1.m */; };
 		AA9A93E622D68AB400464808 /* Lesson2.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9A93E522D68AB400464808 /* Lesson2.m */; };
 		AA9A93EB22E0976900464808 /* Lesson3.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9A93EA22E0976900464808 /* Lesson3.m */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		AA4A6EBA22CE325200A080FF /* ObjcBasics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjcBasics; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4A6EBD22CE325200A080FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA85B73722E9E11000804670 /* Lesson4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson4.h; sourceTree = "<group>"; };
+		AA85B73822E9E11000804670 /* Lesson4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson4.m; sourceTree = "<group>"; };
 		AA9A93E322D68A8100464808 /* Lesson1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson1.m; sourceTree = "<group>"; };
 		AA9A93E522D68AB400464808 /* Lesson2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson2.m; sourceTree = "<group>"; };
 		AA9A93E722D68AC900464808 /* Lesson1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson1.h; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 				AA9A93E522D68AB400464808 /* Lesson2.m */,
 				AA9A93E922E0973A00464808 /* Lesson3.h */,
 				AA9A93EA22E0976900464808 /* Lesson3.m */,
+				AA85B73722E9E11000804670 /* Lesson4.h */,
+				AA85B73822E9E11000804670 /* Lesson4.m */,
 			);
 			path = ObjcBasics;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			files = (
 				AA9A93E622D68AB400464808 /* Lesson2.m in Sources */,
 				AA4A6EBE22CE325200A080FF /* main.m in Sources */,
+				AA85B73922E9E11000804670 /* Lesson4.m in Sources */,
 				AA9A93E422D68A8100464808 /* Lesson1.m in Sources */,
 				AA9A93EB22E0976900464808 /* Lesson3.m in Sources */,
 			);
