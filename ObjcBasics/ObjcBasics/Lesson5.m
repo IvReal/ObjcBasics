@@ -38,27 +38,27 @@ void Lesson5Task1(void)
     // Сложение
     NSNumber* result = calculate2(actAdd, operand1, operand2);
     NSLog(@"%@ + %@ = %@", operand1, operand2, result);
-    [result release];
+    //MRC [result release];
     // Вычитание
     result = calculate2(actDiff, operand1, operand2);
     NSLog(@"%@ - %@ = %@", operand1, operand2, result);
-    [result release];
+    //MRC [result release];
     // Умножение
     result = calculate2(actMult, operand1, operand2);
     NSLog(@"%@ * %@ = %@", operand1, operand2, result);
-    [result release];
+    //MRC [result release];
     // Деление
     result = calculate2(actDiv, operand1, operand2);
     NSLog(@"%@ / %@ = %@", operand1, operand2, result);
-    [result release];
+    //MRC [result release];
     // Деление на 0
-    [operand2 release];
+    //[operand2 release];
     operand2 = [NSNumber numberWithInt:0];
     result = calculate2(actDiv, operand1, operand2);
     NSLog(@"%@ / %@ = %@", operand1, operand2, result);
-    [operand1 release];
+    /*MRC [operand1 release];
     [operand2 release];
-    [result release];
+    [result release];*/
 }
 
 // 2. Смоделировать и разработать программу для стаи птиц (на основе практического задания) с применением ручного управления памятью.
@@ -68,17 +68,17 @@ void Lesson5Task1(void)
 - (instancetype)initWithName:(NSString *)name {
     self = [super init];
     if (self) {
-        [name retain];
+        /*MRC [name retain];
         [name release];
-        _name = name;
+        _name = name;*/
         NSLog(@"Hi %@", name);
     }
     return self;
 }
 - (void)dealloc {
     NSLog(@"Goodbye %@", _name);
-    [_name release];
-    [super dealloc];
+    /*MRC [_name release];
+    [super dealloc];*/
 }
 @end
 
@@ -93,8 +93,8 @@ void Lesson5Task1(void)
     return self;
 }
 - (void)addBirds:(NSArray *)birds {
-    [birds retain];
-    [birds release];
+    /*MRC [birds retain];
+    [birds release];*/
     _birds = birds;
     for (Bird *bird in birds) {
         NSLog(@"%@ join to flight", bird.name);
@@ -102,15 +102,15 @@ void Lesson5Task1(void)
 }
 - (void)breakUp {
     NSLog(@"All birds leave the flight");
-    for (Bird *bird in _birds) {
+    /*MRC for (Bird *bird in _birds) {
         [bird release];
     }
-    [_birds release];
+    [_birds release];*/
 }
 - (void)dealloc {
     [self breakUp];
     NSLog(@"Dealloc flight");
-    [super dealloc];
+    /*MRC [super dealloc]*/;
 }
 @end
 
@@ -125,7 +125,7 @@ void Lesson5Task2(void)
                       nil];
     Flight *angryBirds = [[Flight alloc] init];
     [angryBirds addBirds:birds];
-    [angryBirds release];
+    /*MRC [angryBirds release];*/
 }
 
 // 3. *Улучшить созданную программу из задания 2 с применением пула автоматического освобождения.
@@ -139,7 +139,8 @@ void Lesson5Task3(void)
                           [[Bird alloc] initWithName:@"Jim"],
                           [[Bird alloc] initWithName:@"Jake"],
                           nil];
-        Flight *angryBirds = [[[Flight alloc] init] autorelease];
+        /*MRC Flight *angryBirds = [[[Flight alloc] init] autorelease];*/
+        Flight *angryBirds = [[Flight alloc] init];
         [angryBirds addBirds:birds];
     }
     /* alternative way
