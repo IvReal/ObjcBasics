@@ -7,12 +7,12 @@
 
 // Попрактиковаться с применением блоков: создать программу для вывода сообщений в консоль с использованием минимум 6 блоков
 
-typedef void(^PrintString)(NSString*); // вывод в лог строки
-typedef int(^CalcSquare)(int); // вычисление квадрата целого числа
-typedef NSString*(^Format)(NSString*, int, int); // форматирование
-typedef void(^CapString)(void); // делаем первые буквы слов прописными
 typedef void(^ProcessString)(NSString*); // блок, принимающий строку
+typedef int(^Calc)(int); // блок вычисления функции аргумента
+typedef NSString*(^Format)(NSString*, int, int); // блок форматирование двух целых чисел
+typedef void(^block)(void); // блок для проверки присвоения значения внешней переменной
 
+// Функция разбиения строки на слова и вызовом переданного в функцию блока для каждого слова
 void SplitString(NSString *string, ProcessString block)
 {
     NSArray* words = [string componentsSeparatedByString:@" "];
@@ -25,7 +25,7 @@ void Lesson6Task1(void)
     printf("BLOCKS\n");
     
     // вывод строки в лог через блок
-    PrintString printString = ^(NSString *string) {
+    ProcessString printString = ^(NSString *string) {
         NSLog(@"%@", string);
     };
     printString(@"Objective-C is a very powerful language:-)");
@@ -34,7 +34,7 @@ void Lesson6Task1(void)
     Format format = ^(NSString *fmt, int val1, int val2) {
         return [NSString stringWithFormat:fmt, val1, val2];
     };
-    CalcSquare calcSquare = ^(int value) {
+    Calc calcSquare = ^(int value) {
         return value * value;
     };
     int val = 123;
@@ -43,7 +43,7 @@ void Lesson6Task1(void)
     // делаем первые буквы слов прописными
     __block NSString* strval = @"now i study objective c";
     printString(strval);
-    CapString capString = ^(void) {
+    block capString = ^(void) {
         strval = [strval capitalizedString];
     };
     capString();
