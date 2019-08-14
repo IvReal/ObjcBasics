@@ -60,7 +60,7 @@ void Lesson6Task1(void)
 
 void Lesson6Task2(void)
 {
-    printf("GCD & nNSOperation\n");
+    printf("GCD & NSOperation\n");
     
     dispatch_queue_t queue = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0);
     dispatch_async(queue, ^{ NSLog(@"широкой поступью шагая");  });
