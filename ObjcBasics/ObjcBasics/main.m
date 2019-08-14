@@ -10,11 +10,12 @@
 #include "Lesson3.h"
 #include "Lesson4.h"
 #include "Lesson5.h"
+#include "Lesson6.h"
 
-#define CURRENT_LESSON 5
+#define CURRENT_LESSON 6
 
 int main(int argc, const char * argv[]) {
-    //@autoreleasepool {
+    @autoreleasepool {
         switch (CURRENT_LESSON)
         {
             case 1:
@@ -38,10 +39,14 @@ int main(int argc, const char * argv[]) {
                 Lesson5Task2();
                 Lesson5Task3();
                 break;
+            case 6:
+                Lesson6Task1();
+                Lesson6Task2();
+                break;
             default:
                 break;
         }
-    //}
+    }
     return 0;
 }
 
