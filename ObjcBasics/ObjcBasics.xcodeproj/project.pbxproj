@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA23FB942301BEDD002A3558 /* Lesson6.m in Sources */ = {isa = PBXBuildFile; fileRef = AA23FB932301BEDD002A3558 /* Lesson6.m */; };
+		AA23FB97230C350D002A3558 /* Lesson7.m in Sources */ = {isa = PBXBuildFile; fileRef = AA23FB96230C350D002A3558 /* Lesson7.m */; };
 		AA4A6EBE22CE325200A080FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A6EBD22CE325200A080FF /* main.m */; };
 		AA81B79A22F47D6600EB975E /* Lesson5.m in Sources */ = {isa = PBXBuildFile; fileRef = AA81B79922F47D6600EB975E /* Lesson5.m */; };
 		AA85B73922E9E11000804670 /* Lesson4.m in Sources */ = {isa = PBXBuildFile; fileRef = AA85B73822E9E11000804670 /* Lesson4.m */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		AA23FB922301BEDD002A3558 /* Lesson6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson6.h; sourceTree = "<group>"; };
 		AA23FB932301BEDD002A3558 /* Lesson6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson6.m; sourceTree = "<group>"; };
+		AA23FB95230C350D002A3558 /* Lesson7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson7.h; sourceTree = "<group>"; };
+		AA23FB96230C350D002A3558 /* Lesson7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson7.m; sourceTree = "<group>"; };
 		AA4A6EBA22CE325200A080FF /* ObjcBasics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjcBasics; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4A6EBD22CE325200A080FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AA81B79822F47D6600EB975E /* Lesson5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson5.h; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				AA81B79922F47D6600EB975E /* Lesson5.m */,
 				AA23FB922301BEDD002A3558 /* Lesson6.h */,
 				AA23FB932301BEDD002A3558 /* Lesson6.m */,
+				AA23FB95230C350D002A3558 /* Lesson7.h */,
+				AA23FB96230C350D002A3558 /* Lesson7.m */,
 			);
 			path = ObjcBasics;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				AA81B79A22F47D6600EB975E /* Lesson5.m in Sources */,
 				AA9A93E422D68A8100464808 /* Lesson1.m in Sources */,
 				AA9A93EB22E0976900464808 /* Lesson3.m in Sources */,
+				AA23FB97230C350D002A3558 /* Lesson7.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
