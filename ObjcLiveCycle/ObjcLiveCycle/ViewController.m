@@ -14,10 +14,27 @@
 
 @implementation ViewController
 
+//2. Отследить в созданном приложении все методы жизненного цикла контроллера.
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSLog(@"ViewController did load");
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"ViewController will appear");
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"ViewController did appear");
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    NSLog(@"ViewController will disappear");
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    NSLog(@"ViewController did disappear");
+}
 
 @end
